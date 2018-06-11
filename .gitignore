@@ -188,3 +188,6 @@ $RECYCLE.BIN/
 
 # docker
 mysql/
+
+# Ignore Spring files.
+/spring/*.pid
