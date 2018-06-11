@@ -17,10 +17,14 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 ```
 $ git clone git@github.com:prgyukke/sample_app.git
 $ cd sample_app/
-$ rm -rf .git
-$ git init
-$ git update-index --skip-worktree Gemfile.lock
 $ docker-compose up -d --build
+```
+
+dbコンテナでテスト用データベースを作成
+```
+$ docker exec -it sample_app_db_1 /bin/bash
+# psql -U app --command 'create database app_test;'
+# exit
 ```
 
 appコンテナに入る
