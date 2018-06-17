@@ -12,7 +12,7 @@ class ActiveSupport::TestCase
   class ActiveSupport::TestCase
     fixtures :all
 
-    def is_logged_in
+    def is_logged_in?
       !session[:user_id].nil?
     end
   end
